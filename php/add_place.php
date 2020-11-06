@@ -19,40 +19,94 @@ include("header.php");
 <form method="POST">
 <table>
 <tr>
-	<td><input type="submit" name="localization" value="provence | 6"/><td>
+    <td>&nbsp;</td>
+	<td><input type="submit" name="localization" value="provence | N | 6"/><td>
+    <td><input type="submit" name="localization" value="provence | W | 6"/><td>
+    <td><input type="submit" name="localization" value="provence | S | 6"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | 6"/><td>
 	<td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
 </tr>
 <tr>
-        <td><input type="submit" name="localization" value="provence | 5"/><td>
-        <td><input type="submit" name="localization" value="laffitte | 5"/><td>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="localization" value="provence | N | 5"/><td>
+    <td><input type="submit" name="localization" value="provence | W | 5"/><td>
+    <td><input type="submit" name="localization" value="provence | S | 5"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | 5"/><td>
+    <td><input type="submit" name="localization" value="laffitte | N | 5"/><td>
+    <td><input type="submit" name="localization" value="laffitte | W | 5"/><td>
+    <td><input type="submit" name="localization" value="laffitte | S | 5"/><td>
 </tr>
 <tr>
-        <td><input type="submit" name="localization" value="provence | 4"/><td>
-        <td><input type="submit" name="localization" value="laffitte | 4"/><td>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="localization" value="provence | N | 4"/><td>
+    <td><input type="submit" name="localization" value="provence | W | 4"/><td>
+    <td><input type="submit" name="localization" value="provence | S | 4"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | 4"/><td>
+    <td><input type="submit" name="localization" value="laffitte | N | 4"/><td>
+    <td><input type="submit" name="localization" value="laffitte | W | 4"/><td>
+    <td><input type="submit" name="localization" value="laffitte | S | 4"/><td>
 </tr>
 <tr>
-        <td><input type="submit" name="localization" value="provence | 3"/><td>
-        <td><input type="submit" name="localization" value="laffitte | 3"/><td>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="localization" value="provence | N | 3"/><td>
+    <td><input type="submit" name="localization" value="provence | W | 3"/><td>
+    <td><input type="submit" name="localization" value="provence | S | 3"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | 3"/><td>
+    <td><input type="submit" name="localization" value="laffitte | N | 3"/><td>
+    <td><input type="submit" name="localization" value="laffitte | W | 3"/><td>
+    <td><input type="submit" name="localization" value="laffitte | S | 3"/><td>
 </tr>
 <tr>
-        <td><input type="submit" name="localization" value="provence | 2"/><td>
-        <td><input type="submit" name="localization" value="laffitte | 2"/><td>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="localization" value="provence | N | 2"/><td>
+    <td><input type="submit" name="localization" value="provence | W | 2"/><td>
+    <td><input type="submit" name="localization" value="provence | S | 2"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | 2"/><td>
+    <td><input type="submit" name="localization" value="laffitte | N | 2"/><td>
+    <td><input type="submit" name="localization" value="laffitte | W | 2"/><td>
+    <td><input type="submit" name="localization" value="laffitte | S | 2"/><td>
 </tr>
 <tr>
-        <td><input type="submit" name="localization" value="provence | 1"/><td>
-        <td><input type="submit" name="localization" value="laffitte | 1"/><td>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="localization" value="provence | N | 1"/><td>
+    <td><input type="submit" name="localization" value="provence | W | 1"/><td>
+    <td><input type="submit" name="localization" value="provence | S | 1"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | 1"/><td>
+    <td><input type="submit" name="localization" value="laffitte | N | 1"/><td>
+    <td><input type="submit" name="localization" value="laffitte | W | 1"/><td>
+    <td><input type="submit" name="localization" value="laffitte | S | 1"/><td>
 </tr>
 <tr>
-        <td><input type="submit" name="localization" value="provence | 0"/><td>
-        <td><input type="submit" name="localization" value="laffitte | 0"/><td>
+    <td><input type="submit" name="localization" value="provence | E | 0"/><td>
+    <td><input type="submit" name="localization" value="provence | N | 0"/><td>
+    <td><input type="submit" name="localization" value="provence | W | 0"/><td>
+    <td><input type="submit" name="localization" value="provence | S | 0"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | 0"/><td>
+    <td><input type="submit" name="localization" value="laffitte | N | 0"/><td>
+    <td><input type="submit" name="localization" value="laffitte | W | 0"/><td>
+    <td><input type="submit" name="localization" value="laffitte | S | 0"/><td>
 </tr>
 <tr>
-        <td><input type="submit" name="localization" value="provence | -1"/><td>
-        <td><input type="submit" name="localization" value="laffitte | -1"/><td>
+    <td><input type="submit" name="localization" value="provence | E | -1"/><td>
+    <td><input type="submit" name="localization" value="provence | N | -1"/><td>
+    <td><input type="submit" name="localization" value="provence | W | -1"/><td>
+    <td><input type="submit" name="localization" value="provence | S | -1"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | -1"/><td>
+    <td><input type="submit" name="localization" value="laffitte | N | -1"/><td>
+    <td><input type="submit" name="localization" value="laffitte | W | -1"/><td>
+    <td><input type="submit" name="localization" value="laffitte | S | -1"/><td>
 </tr>
 <tr>
-        <td><input type="submit" name="localization" value="provence | -2"/><td>
-        <td><input type="submit" name="localization" value="laffitte | -2"/><td>
+    <td><input type="submit" name="localization" value="provence | E | -2"/><td>
+    <td><input type="submit" name="localization" value="provence | N | -2"/><td>
+    <td><input type="submit" name="localization" value="provence | W | -2"/><td>
+    <td><input type="submit" name="localization" value="provence | S | -2"/><td>
+    <td><input type="submit" name="localization" value="laffitte | E | -2"/><td>
+    <td><input type="submit" name="localization" value="laffitte | N | -2"/><td>
+    <td><input type="submit" name="localization" value="laffitte | W | -2"/><td>
+    <td><input type="submit" name="localization" value="laffitte | S | -2"/><td>
 </tr>
 
 </table>
