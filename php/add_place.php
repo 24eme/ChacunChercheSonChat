@@ -6,14 +6,15 @@ if (!file) {
         exit;
 }
 if ($_POST['localization']) {
-	file_put_contents($file, "localization: ".$_POST['localization'], FILE_APPEND);
-	header("Location: list_files.php");
+	file_put_contents($file.".localization", "localization: ".$_POST['localization']);
+	header("Location: list_files.php#".$file);
 	exit;
 }
 include("header.php");
 ?>
 <pre>
 <?php echo file_get_contents($file); ?>
+<?php echo file_get_contents($file.".localization"); ?>
 </pre>
 <form method="POST">
 <table>
