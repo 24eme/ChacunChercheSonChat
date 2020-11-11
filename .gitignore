@@ -1,3 +1,5 @@
 php/data
 CCC_WifiScan2HTTP/arduino_secrets.h
 Arduino/CCC_WifiScan2HTTP/arduino_secrets.h
+data/
+.ipynb_checkpoints/
