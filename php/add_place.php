@@ -1,11 +1,11 @@
 <?php
 
 $file = $_GET['place'];
-if (!file) {
+if (!$file) {
         header("Location: list_files.php");
         exit;
 }
-if ($_POST['localization']) {
+if (isset($_POST['localization']) && $_POST['localization']) {
 	file_put_contents($file.".localization", "localization: ".$_POST['localization']);
 	header("Location: list_files.php#".$file);
 	exit;
