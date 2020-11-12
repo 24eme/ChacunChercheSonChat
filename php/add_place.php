@@ -15,6 +15,8 @@ include("header.php");
 <pre>
 <?php echo file_get_contents($file); ?>
 <?php echo file_get_contents($file.".localization"); ?>
+
+<?php echo file_get_contents($file.".prediction"); ?>
 </pre>
 <form method="POST">
 <table>
