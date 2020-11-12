@@ -13,10 +13,16 @@ if (isset($_POST['localization']) && $_POST['localization']) {
 include("header.php");
 ?>
 <pre>
+<?php echo($file); ?> :
 <?php echo file_get_contents($file); ?>
 <?php echo file_get_contents($file.".localization"); ?>
-
-<?php echo file_get_contents($file.".prediction"); ?>
+<?php
+if (!file_exists($file.".prediction")) {
+    $f = popen("bash ../prediction/predict.sh > ".$file.".prediction",'w');
+    fwrite($f, file_get_contents($file));
+    pclose($f);
+}
+ echo file_get_contents($file.".prediction"); ?>
 </pre>
 <form method="POST">
 <table>
