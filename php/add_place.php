@@ -1,7 +1,7 @@
 <?php
 
 $file = $_GET['place'];
-if (!$file) {
+if (!$file || !file_exists($file) || !preg_match('/^data\/triphasee_[0-9:T\+\-]*.wifi$/', $file)) {
         header("Location: list_files.php");
         exit;
 }
@@ -18,7 +18,7 @@ include("header.php");
 <?php echo file_get_contents($file.".localization"); ?>
 
 <?php
-if (!file_exists($file.".prediction")) {
+if (!file_exists($file.".prediction") || !filesize($file.".prediction")) {
     $f = popen("bash ../prediction/wifi2localization.sh > ".$file.".prediction",'w');
     fwrite($f, file_get_contents($file));
     pclose($f);
