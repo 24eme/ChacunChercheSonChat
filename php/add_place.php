@@ -16,9 +16,10 @@ include("header.php");
 <?php echo($file); ?> :
 <?php echo file_get_contents($file); ?>
 <?php echo file_get_contents($file.".localization"); ?>
+
 <?php
 if (!file_exists($file.".prediction")) {
-    $f = popen("bash ../prediction/predict.sh > ".$file.".prediction",'w');
+    $f = popen("bash ../prediction/wifi2localization.sh > ".$file.".prediction",'w');
     fwrite($f, file_get_contents($file));
     pclose($f);
 }
