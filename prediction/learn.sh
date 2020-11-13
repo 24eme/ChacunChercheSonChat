@@ -6,4 +6,4 @@ ls *localization | while read locfile ; do file=$(echo $locfile | sed 's/.locali
 
 cd -
 
-python learn.py
+python3 learn.py
