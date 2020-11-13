@@ -38,7 +38,7 @@ data['res2'] = data['res'].dropna().apply(lambda x: int(res2df(x, 2)))
 target = [
     ['l', 'p'],
     ['S', 'E', 'N', 'W'],
-    ['-1', '0', '1', '2', '3', '4', '5', '6'], 
+    ['-1', '0', '1', '2', '3', '4', '5', '6'],
     [''] * 200
 ]
 
@@ -59,7 +59,7 @@ X = datalearn[['dbm0', 'mac0']].values
 y0 = datalearn[['res0']].values
 y1 = datalearn[['res1']].values
 y2 = datalearn[['res2']].values
-for i in range(1, 10): 
+for i in range(1, 10):
     nan_dbm = datalearn['dbm'+str(i)].isna() == False
     nan_mac = datalearn['mac'+str(i)].isna() == False
     nan = nan_dbm & nan_mac
@@ -98,43 +98,6 @@ new_learn_score2 = lr2.score(X, y2)
 # In[5]:
 
 
-sample = datalearn.sample()
-
-X = sample[['dbm0', 'mac0']].values
-y0 = sample[['res0']].values
-y1 = sample[['res1']].values
-y2 = sample[['res2']].values
-for i in range(1, 10): 
-    nan_dbm = sample['dbm'+str(i)].isna() == False
-    nan_mac = sample['mac'+str(i)].isna() == False
-    nan = nan_dbm & nan_mac
-    X = np.append(X, sample[['dbm'+str(i), 'mac'+str(i)]][nan].values, axis = 0)
-    y0 = np.append(y0, sample[['res0']][nan].values, axis = 0)
-    y1 = np.append(y1, sample[['res1']][nan].values, axis = 0)
-    y2 = np.append(y2, sample[['res2']][nan].values, axis = 0)
-
-res0 = pd.DataFrame(lr0.predict_proba(X))
-mean0 = pd.DataFrame(res0.mean())
-r0 = mean0.sort_values(by=0, ascending=False).index[0]
-
-res1 = pd.DataFrame(lr1.predict_proba(X))
-mean1 = pd.DataFrame(res1.mean())
-r1 = mean1.sort_values(by=0, ascending=False).index[0]
-
-res2 = pd.DataFrame(lr2.predict_proba(X))
-mean2 = pd.DataFrame(res2.mean())
-r2 = mean2.sort_values(by=0, ascending=False).index[0]
-
-s0 = lr0.predict(X)
-s1 = lr1.predict(X)
-s2 = lr2.predict(X)
-
-print("resultat {}\nres ind\t{}\nmesure\t({})".format([r0, r1, r2], [[int(s0[0]), int(s1[0]), int(s2[0])], [int(s0[1]), int(s1[1]), int(s2[1])]], [int(y0.ravel()[0]), int(y1.ravel()[0]), int(y2.ravel()[0])]))
-
-
-# In[6]:
-
-
 predicted = []
 
 for mesure in datalearn.values:
@@ -143,7 +106,7 @@ for mesure in datalearn.values:
         x = mesure[i*3 + 1 : i*3 + 3]
         if x[0] > 0:
             data2predict.append(x)
-    
+
     predicted.append([
         pd.DataFrame(pd.DataFrame(lr0.predict_proba(data2predict)).mean()).sort_values(by=0, ascending=False).index[0],
         pd.DataFrame(pd.DataFrame(lr1.predict_proba(data2predict)).mean()).sort_values(by=0, ascending=False).index[0],
@@ -153,14 +116,14 @@ predicted = pd.DataFrame(predicted)
 predicted
 
 
-# In[7]:
+# In[6]:
 
 
 origin = pd.DataFrame(datalearn[['res0', 'res1', 'res2']].values)
 origin
 
 
-# In[12]:
+# In[9]:
 
 
 from sklearn.metrics import classification_report
@@ -182,17 +145,10 @@ for i in res.keys():
 print(classification_report(origin[3], predicted[3], target_names=t))
 
 
-# In[13]:
+# In[10]:
 
 
 import joblib
 
 tobesaved = [lr0, lr1, lr2, LP, SENW, ETAGES, macs]
 files = joblib.dump(tobesaved, '../data/learner.lr')
-
-
-# In[ ]:
-
-
-
-
