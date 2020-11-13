@@ -38,6 +38,6 @@ try:
     mean2 = pd.DataFrame(res2.mean())
     r2 = mean2.sort_values(by=0, ascending=False).index[0]
 
-    print('prediction: '+LP[r0] +' | '+ SENW[r1] +' | '+ ETAGES[r2])
+    print('prediction:   '+LP[r0] +' | '+ SENW[r1] +' | '+ ETAGES[r2])
 except:
     pass
